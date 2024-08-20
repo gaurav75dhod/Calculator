@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Calculator.png" type="image/x-icon">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightgoldenrodyellow;
+        }
+        .heading{
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+        h1{
+            font-size: 300%;
+        }
+        .calculator{
+            justify-content: center;
+            border: 2px solid black;
+            padding: 20px;
+            display: inline-block;
+            background-color: darkslategrey;
+            border-radius: 10px;
+            margin-left: 39.5%;
+        }
+        input{
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+            font-size: 20px;
+            text-align: center;
+            padding: 5px;
+            background-color: darkslategrey;
+            border: 2px solid white;
+            box-shadow: 2px 2px 2px white;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #ans{
+            border-radius: 0%;
+            width: 270px;
+            text-align: right;
+            font-size: 30px;
+            border: 0;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Calculator App</h1>
+    </div>
+    <div class="calculator">
+        <form>
+            <div class="answer">
+                <input type="text" name="display" id="ans">
+            </div>
+            <div class="row1">
+                <input type="button" value="AC"
+                onclick="display.value = ''">
+                <input type="button" value="DEL"
+                onclick="display.value = display.value.toString().slice(0,-1) ">
+                <input type="button" value="."
+                onclick="display.value += '.'">
+                <input type="button" value="/"
+                onclick="display.value += '/'">
+            </div>
+            <div class="row2">
+                <input type="button" value="7"
+                onclick="display.value += '7'">
+                <input type="button" value="8"
+                onclick="display.value += '8'">
+                <input type="button" value="9"
+                onclick="display.value += '9'">
+                <input type="button" value="*"
+                onclick="display.value += '*'">
+            </div>
+            <div class="row3">
+                <input type="button" value="4"
+                onclick="display.value += '4'">
+                <input type="button" value="5"
+                onclick="display.value += '5'">
+                <input type="button" value="6"
+                onclick="display.value += '6'">
+                <input type="button" value="-"
+                onclick="display.value += '-'">
+            </div>
+            <div class="row4">
+                <input type="button" value="1"
+                onclick="display.value += '1'">
+                <input type="button" value="2"
+                onclick="display.value += '2'">
+                <input type="button" value="3"
+                onclick="display.value += '3'">
+                <input type="button" value="+"
+                onclick="display.value += '+'">
+            </div>
+            <div class="row5">
+                <input type="button" value="000"
+                onclick="display.value += '000'">
+                <input type="button" value="00"
+                onclick="display.value += '00'">
+                <input type="button" value="0"
+                onclick="display.value += '0'">
+                <input type="button" value="="
+                onclick="display.value = eval(display.value)">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
